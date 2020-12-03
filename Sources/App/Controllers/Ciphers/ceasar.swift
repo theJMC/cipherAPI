@@ -2,11 +2,7 @@ import Vapor
 import Foundation
 
 struct Ceasar: RouteCollection {
-    func boot(routes: RoutesBuilder) throws {
-        let ceasar = routes.grouped("ceasar")
-        ceasar.get(use: encode)
-        ceasar.get(use: decode)
-    }
+    func boot(routes: RoutesBuilder) throws {}
     
     func encode(req: Request) throws -> String {
         // Cesar Cipher Encodes the given text using the shift
